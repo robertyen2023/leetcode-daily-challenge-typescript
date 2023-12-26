@@ -10,6 +10,9 @@ const numRollsToTarget = (n: number, k: number, target: number): number {
 
     const MODULO = 10 ** 9 + 7;
 
+    // { `${n},${target}`: count }
+    let cache: { [cacheKey: string]: number } = {}; 
+
     const count = (n: number, target: number): number => {
         // the best case when we don't know the constraints
         // no dice to 
@@ -21,6 +24,10 @@ const numRollsToTarget = (n: number, k: number, target: number): number {
             return 0;
         }
 
+        if (cache[`${n},${target}`]) {
+            return cache[`${n},${target}`];
+        }
+
         let res: number = 0;
         for (let val: number = 1; val <= k; val++) {
             // given the val, we can add the sub problem below to res
@@ -30,6 +37,8 @@ const numRollsToTarget = (n: number, k: number, target: number): number {
             // note that it would NEVER exceed the MODULO (8:50)
             res = (res + count(n - 1, target - val)) % MODULO;
         }
+
+        cache[`${n},${target}`] = res;
         return res;
     }
 
