@@ -11,6 +11,16 @@ const numRollsToTarget = (n: number, k: number, target: number): number {
     const MODULO = 10 ** 9 + 7;
 
     const count = (n: number, target: number): number => {
+        // the best case when we don't know the constraints
+        // no dice to 
+        if (n === 0) {
+            // a valid way
+            if (target === 0) return 1;
+
+            // invalid
+            return 0;
+        }
+
     }
 
     return count(n, target);
