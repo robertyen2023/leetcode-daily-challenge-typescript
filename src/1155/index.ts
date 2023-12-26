@@ -21,6 +21,16 @@ const numRollsToTarget = (n: number, k: number, target: number): number {
             return 0;
         }
 
+        let res: number = 0;
+        for (let val: number = 1; val <= k; val++) {
+            // given the val, we can add the sub problem below to res
+            // res = res + count(n - 1, target - val);
+            // but we need to handle MODULO at the same time, 
+            // so the result would be like the below
+            // note that it would NEVER exceed the MODULO (8:50)
+            res = (res + count(n - 1, target - val)) % MODULO;
+        }
+        return res;
     }
 
     return count(n, target);
