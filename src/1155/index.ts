@@ -14,7 +14,7 @@ const numRollsToTarget = (n: number, k: number, target: number): number => {
     let cache: { [cacheKey: string]: number } = {}; 
 
     const count = (n: number, target: number): number => {
-        // the best case when we don't know the constraints
+        // the base case when we don't know the constraints
         // no dice to 
         if (n === 0) {
             // a valid way
