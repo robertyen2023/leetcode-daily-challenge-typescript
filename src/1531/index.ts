@@ -1,5 +1,8 @@
 export default () => {
     console.log('leetcode problem 1531 solution');
+    console.log("result of minCost('abaac', [1,2,3,4,5]): ", minCost('abaac', [1,2,3,4,5]));
+    console.log("result of minCost('abc', [1,2,3]): ", minCost('abc', [1,2,3]));
+    console.log("result of minCost('aabaa', [1,2,3,4,1]): ", minCost('aabaa', [1,2,3,4,1]));
 }
 
 function minCost(colors: string, neededTime: number[]): number {
