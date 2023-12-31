@@ -4,6 +4,7 @@ import problem1155Solution from './1155/index';
 import problem67Solution from './67/index';
 import problem1578Solution from './1578/index';
 import problem1531Solution from './1531/index';
+import problem1335Solution from './1335/index';
 
 function runProblemSolution (solution = () => {}) {
     solution();
@@ -14,5 +15,4 @@ function runProblemSolution (solution = () => {}) {
 // runProblemSolution(problem1531Solution);
 // runProblemSolution(problem67Solution);
 // runProblemSolution(problem1578Solution);
-runProblemSolution(problem1531Solution);
-
+runProblemSolution(problem1335Solution);
