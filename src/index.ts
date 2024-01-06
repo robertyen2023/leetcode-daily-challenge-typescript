@@ -7,7 +7,8 @@
 // import problem1335Solution from './1335/index';
 // import problem2125Solution from './2125/index';
 // import problem2870Solution from './2870/index';
-import problem300Solution from './300/index';
+// import problem300Solution from './300/index';
+import problem1235Solution from './1235/index';
 
 function runProblemSolution (solution = () => {}) {
     solution();
@@ -21,4 +22,5 @@ function runProblemSolution (solution = () => {}) {
 // runProblemSolution(problem1335Solution);
 // runProblemSolution(problem2125Solution);
 // runProblemSolution(problem2870Solution);
-runProblemSolution(problem300Solution);
+// runProblemSolution(problem300Solution);
+runProblemSolution(problem1235Solution);
